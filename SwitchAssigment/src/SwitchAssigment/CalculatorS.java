@@ -1,7 +1,7 @@
 package SwitchAssigment;
 import java.util.Scanner;
 
-public class Calculator
+public class CalculatorS
 {
 	public static void main(String[] args) 
 	{
