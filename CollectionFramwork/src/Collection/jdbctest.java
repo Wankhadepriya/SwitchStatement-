@@ -4,7 +4,7 @@ import java.sql.*;
 public class jdbctest
 {
  public static final String driverName  ="com.mysql.cj.jdbc.Driver";
- public static final String url= "jdbc:mysql://localhost:3306/empolyee";
+ public static final String url= "jdbc:mysql://localhost:3306/rsytem";
  public static final String userName= "root";
  public static final String passWord= "priya";
  
@@ -20,18 +20,18 @@ public class jdbctest
 		{
 			Class.forName(driverName);
 			con = DriverManager.getConnection(url,userName,passWord);
-		    ps = con.prepareStatement("select *from employee"); 
+		    ps = con.prepareStatement("select *from restaurant"); 
 			rs = ps.executeQuery();
 			System.out.println(con);
 			while(rs.next())
 			{
-				
-				System.out.println(rs.getInt("emp_id")+"\t");
-				System.out.println(rs.getString("emp_Name")+"\t");
-				System.out.println(rs.getString("gander")+"\t");
-				System.out.println(rs.getInt("salary")+"\t");
-				System.out.println(rs.getString("mail")+"\t");
-				System.out.println(rs.getString("adress")+"\t");
+			
+				System.out.println(rs.getString("name")+"\t");
+				System.out.println(rs.getInt("opening_time")+"\t");
+				System.out.println(rs.getInt("closing_time")+"\t");
+				System.out.println(rs.getString("phone_no")+"\t");
+                System.out.println(rs.getString("address")+"\t");
+				System.out.println(rs.getString("cuisine")+"\t");
 
 				
 			
